@@ -2,7 +2,12 @@ import React from "react";
 import { RowComponent, ItemContainer } from "./TableRow.styles";
 import { TeamLogo } from "../TeamLogo/TeamLogo";
 import BookmarkIcon from "../BookmarkIcon/BookmarkIcon";
-export const TableRow = ({ team, isBookmarked, requests }) => {
+
+const wrapComponents = (components) => {
+  
+}
+
+export const TableRow = ({ team, isBookmarked, requests, tooManyRequests }) => {
   return (
     <RowComponent>
       <ItemContainer>
@@ -19,6 +24,7 @@ export const TableRow = ({ team, isBookmarked, requests }) => {
           isBookmarked={isBookmarked}
           id={team.id}
           requests={requests}
+          tooManyRequests={tooManyRequests}
         />
       </ItemContainer>
     </RowComponent>

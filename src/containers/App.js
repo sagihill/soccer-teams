@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import ErrorBoundary from "../components/ErrorBoundary/ErrorBoundary";
 import { TeamsTable } from "../components/TeamsTable/TeamsTable";
-import { getTeams } from "../redux/teams/actions";
+import { getTeams } from "../redux/teams/TeamActions";
 import { AppComponent } from "./App.styles";
 
 const mapStateToProps = (state) => {
@@ -10,7 +10,8 @@ const mapStateToProps = (state) => {
     teams: state.teamsReducer.teams,
     bookmarkedTeams: state.teamsReducer.bookmarkedTeams,
     isPending: state.teamsReducer.isPending,
-    requests: state.teamsReducer.requests,
+    requests: state.requestsReducer.requests,
+    tooManyRequests: state.requestsReducer.tooManyRequests,
   };
 };
 

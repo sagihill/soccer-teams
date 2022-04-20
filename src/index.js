@@ -8,13 +8,14 @@ import { createLogger } from "redux-logger";
 
 import App from "./containers/App";
 import registerServiceWorker from "./registerServiceWorker";
-import { teamsReducer } from "./redux/reducers";
+import { teamsReducer } from "./redux/teams/TeamsReducer";
+import { requestsReducer } from "./redux/requests/RequestsReducer";
 
 import "./index.css";
 
 const logger = createLogger();
 
-const rootReducers = combineReducers({ teamsReducer });
+const rootReducers = combineReducers({ teamsReducer, requestsReducer });
 
 const store = createStore(
   rootReducers,

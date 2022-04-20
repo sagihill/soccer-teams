@@ -8,6 +8,7 @@ export const TeamsTable = ({
   onGetTeams,
   bookmarkedTeams,
   requests,
+  tooManyRequests,
 }) => {
   useEffect(function (params) {
     onGetTeams();
@@ -26,6 +27,7 @@ export const TeamsTable = ({
               team={team}
               isBookmarked={isBookmarked}
               requests={requests}
+              tooManyRequests={tooManyRequests}
             />
           );
         })}
